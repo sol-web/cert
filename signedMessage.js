@@ -18,9 +18,10 @@ var signature = userAPrivateKey.sign(md)
 // 1.3 <메시지, 전자서명>을 수신자 B에게 전송
 console.log('송신자 A측')
 console.log('Message: ' + message)
-console.log('Signature: ' + forge.util.bytesToHex(signature)) // 2.1 송신자 A로부터 <메시지, 전자서명>을 수신
+console.log('Signature: ' + forge.util.bytesToHex(signature))
 
 // 2. 수신자 B의 서명 검증
+// 2.1 송신자 A로부터 <메시지, 전자서명>을 수신
 console.log('수신자 B측')
 
 // 2.2 송신자 A의 인증서 읽어옴
